@@ -1,0 +1,30 @@
+#SignUp-main {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: white;
+    border-radius: 20px;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+    margin-top: 80px;
+    display: grid;
+    grid-template-rows: repeat(4, 50px);
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 30px 30px 89px 30px;
+    border-radius: 20px;
+}
+
+#SignUp-main>div:nth-child(2)>a>button {
+    width: 22.5%;
+    padding: 15px;
+    position: absolute;
+    top: 79%;
+    left: 60.9%;
+}

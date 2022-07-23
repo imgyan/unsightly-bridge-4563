@@ -1,0 +1,42 @@
+#main {
+    width: 100%;
+    /* border: 1px solid red; */
+    /* position: relative; */
+}
+
+#crauser {
+    width: 100%;
+}
+
+#main button {
+    position: absolute;
+    top: 30%;
+    background-color: rgba(100, 100, 100, 0.1);
+    border: none;
+    font-size: 2.5rem;
+    padding: 30px 10px 30px 10px;
+}
+
+#main button:nth-child(2) {
+    left: 3px;
+}
+
+#main button:nth-child(3) {
+    right: 3px;
+}
+
+.main2 {
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+#main-last {
+    width: 95%;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, auto);
+    row-gap: 20px;
+}

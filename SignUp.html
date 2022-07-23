@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signu/Signin</title>
+
+    <link rel="stylesheet" href="./Styles/index.css">
+    <link rel="stylesheet" href="./Styles/navbar.css">
+    <link rel="stylesheet" href="./Styles/menu.css">
+    <link rel="stylesheet" href="./Styles/footer.css">
+    <link rel="stylesheet" href="./Styles/main.css">
+    <link rel="stylesheet" href="./Styles/men.css">
+    <link rel="stylesheet" href="./Styles/SignUp.css">
+
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="index.html"><img src="https://www.jiomart.com/assets/version1657814599/smartweb/images/jiomart_logo_beta.svg" alt="jiologo"></a>
+            </div>
+            <div><input id="search-id" type="text" placeholder="Search Essentials,groceries,and more..."></div>
+            <div id="nav-lastelement">
+                <ul>
+
+
+                    <li id="signin-id"><a href="SignUp.html">Sign in / Sign up</a></li>
+
+                    <li><a href="Cart.html">Cart</a></li>
+
+
+                </ul>
+            </div>
+
+        </nav>
+        <div class="menu-explor">
+            <div>
+                <div>
+
+                    <a href="./locatoin.html"></a>
+                    <p>Delivere to</p>
+
+
+                </div>
+
+                <div class="class-menu">
+                    <button class="class-button">Groceries</button>
+                    <div class="dropdownmenu">
+                        <a href="Fruits&Vegetables.html">Fruits & Vegetables</a>
+                        <a href="Dairy&Bakery.html">Dairy & Bakery</a>
+                        <a href="Staples.html">Staples</a>
+                        <a href="Snacks&BrandedFoods.html">Snacks & Branded Foods</a>
+                        <a href="Beverages.html">Beverages</a>
+                    </div>
+                </div>
+                <div class="class-menu">
+                    <button class="class-button">Premium Fruits</button>
+                    <div class="dropdownmenu">
+                        <a href="avocado-peach-plum.html">avocado-peach-plum</a>
+                        <a href="Womens.html">Womens</a>
+                        <a href="fruits.html">fruits</a>
+                        <a href="pineapple.html">pineapple</a>
+                        <a href="citrus-mango-grapes/.html">citrus-mango-grapes/</a>
+                    </div>
+                </div>
+                <div class="class-menu">
+                    <button class="class-button">Home & Kitchen</button>
+                    <div class="dropdownmenu">
+                        <a href="kitchenware.html">Kitchenware</a>
+                        <a href="dining.html">Dining</a>
+                        <a href="furnishing.html">Furnishing</a>
+                        <a href="home-decor.html">Home-Decor</a>
+                        <a href="furniture.html">furniture</a>
+                    </div>
+                </div>
+
+                <!-- <div> -->
+                <!-- <a href="./Fashion.html">
+                        <p>Fashion</p> -->
+                <div class="class-menu">
+                    <button class="class-button">Fashion</button>
+                    <div class="dropdownmenu">
+                        <a href="Mens.html">Men</a>
+                        <a href="Womens.html">Womens</a>
+                        <a href="Boys.html">Boys</a>
+                        <a href="Girls.html">Girls</a>
+                        <a href="Infants.html">Infants</a>
+                        <a href="trans.html">Trans</a>
+                    </div>
+                </div>
+
+
+                <div class="class-menu">
+                    <button class="class-button">Electronics</button>
+                    <div class="dropdownmenu">
+                        <a href="Mobiles&Tablets.html">Mobiles & Tablets</a>
+                        <a href="TV&Speaker.html">TV & Speaker</a>
+                        <a href="HomeAppliances.html">Home Appliances</a>
+                        <a href="Computers.html">Computers</a>
+                        <a href="Cameras.html">Camerasants</a>
+                    </div>
+                </div>
+                <div class="class-menu">
+                    <button class="class-button">Beauty</button>
+                    <div class="dropdownmenu">
+                        <a href="Make-Up.html">Make-Up</a>
+                        <a href="Hair.html">Hair</a>
+                        <a href="SkinCare.html">Skin Care</a>
+                        <a href="PersonalCare.html">Personal Care</a>
+                        <a href="Fragrances.html">Fragrances</a>
+                    </div>
+                </div>
+                <div class="class-menu">
+                    <button class="class-button">Jewellery</button>
+                    <div class="dropdownmenu">
+                        <a href="FineJewellery.html">Fine Jewellery</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+    <main id="SignUp-main">
+        <div><img src="https://www.jiomart.com/msassets/images/login-banner.jpg" alt=""></div>
+        <div>
+            <form>
+                <input id="name" type="text" placeholder="Enter Your Name">
+                <input id="email" type="text" placeholder="Enter your email">
+                <input type="password" id="password" placeholder="Enter your Password">
+                <input type="submit" value="SignUp">
+
+            </form>
+            <a href="Signin.html"><button>SignIn</button></a>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
+<script>
+    let form = document.querySelector("form");
+    let signpLS = JSON.parse(localStorage.getItem("signup")) || []
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        let signupobj = {
+            name: form.name.value,
+            email: form.email.value,
+            password: form.password.value,
+        }
+
+        if (signupobj.name == "" || signupobj.email == "" || signupobj.password == "") {
+            alert("Enter details")
+            return;
+        }
+        signpLS.push(signupobj)
+        localStorage.setItem("signup", JSON.stringify(signpLS))
+            //console.log(signupobj)
+    })
+</script>
+<script src="./Scripts/signin-signup.js"></script>
